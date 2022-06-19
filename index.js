@@ -9,10 +9,10 @@ import cors from 'cors';
 const app = express();
 
 // Definir el puerto
-const port = process.env.PORT || 4000;
+const port = process.env.PORT;
 
 // Origen(es)
-const whiteList = ['http://localhost:3000'];
+const whiteList = [process.env.WHITELIST];
 
 async function main() {
     try {
