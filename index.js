@@ -22,6 +22,8 @@ async function main() {
         // Conectar la base de datos
         db.authenticate().then(() => console.log('Base de datos conectada'))
             .catch(error => console.log(error));
+
+        // Crear la(s) tabla(s)
         await db.sync({ force: false });
 
         // Habilitar body parser
